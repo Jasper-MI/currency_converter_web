@@ -22,8 +22,12 @@ main {
   background-color: white;
 }
 
+/* Headline */
 header h1 {
+  padding-top: 20px;
+  padding-bottom: 30px;
   color: white;
+  font-size: 50px;
 }
 
 
@@ -35,9 +39,11 @@ header h1 {
   border: 0.5px solid rgba(0, 0, 0, 0.548);
   font-size: 30px;
   max-width: 100%;
+}
 
-
-
+#input-first-currency:hover {
+  outline: 2px solid #1455d6;
+  background-color: #e6e6e6;
 }
 
 
@@ -189,6 +195,8 @@ header h1 {
   border: 0.5px solid rgba(0, 0, 0, 0.548);
   border-radius: 10px;
   grid-row: span 2;
+  transition-property: border-radius;
+  transition-duration: 1s;
 
 }
 
