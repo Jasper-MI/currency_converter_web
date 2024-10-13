@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency converter</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 
@@ -13,36 +14,40 @@
         <h1>Currency converter</h1>
     </header>
 
-    <main>
-        <p>Type in the amount you want to convert</p>
-        <input type="number" id="input-first-currency" >
-        <div id="dropdow-first-currency">
-            <button onclick="dropDownShow(1)" class="button-first-currency">First Currency</button>
+    <main>          
+        <input type="number" id="input-first-currency" value="100">
+        <div id="dropdown-first-currency" class="dropdown-first-currency">
+            <button class="button-first-currency">
+                <p>First Currency</p>
+                <i class="material-icons">arrow_drop_down</i>
+            </button>
             <div id="list-first-currency" class="list-currencies">
                 <button class="first-currency">USD</button>
                 <button class="first-currency">EUR</button>
                 <button class="first-currency">GBP</button>
             </div>
         </div>
-
-        <p>to</p>
-        <div id="dropdow-second-currency">
-            <button onclick="dropDownShow(2)" class="button-second-currency">Second Currency</button>
+        <button class="convert-button">convert</button>
+        <p id="result">Result:</p>
+        <div id="dropdown-second-currency" class="dropdown-second-currency">
+            <button class="button-second-currency">
+                <p>Second Currency</p>
+                <i class="material-icons">arrow_drop_down</i>
+            </button>
             <div id="list-second-currency" class="list-currencies">
                 <button class="second-currency">USD</button>
                 <button class="second-currency">EUR</button>
                 <button class="second-currency">GBP</button>
             </div>
-        </div>
-        <button class="convert-button">convert</button>
-        <p id="result">Result</p>
-        <p id="test-text">Test Text</p>
+            
+        </div>     
+        <div></div>
 
 
     </main>
 
     <footer>
-        <p>&copy; 2024 Deine Webseite</p>
+        <p>&copy; 2024</p>
     </footer>
 
     <script src="script.js"></script>

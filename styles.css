@@ -1,41 +1,198 @@
+*{
+  font-family: Helvetica, sans-serif;
+}
+
+html body {
+  /*background-image: linear-gradient(to bottom right, #00308F, #1974D2); */
+  background-color:#013eb6 ;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.507) ;
+  background-color: white;
+}
+
+header h1 {
+  color: white;
+}
+
+
+/* Input */
+
+#input-first-currency {
+  border-radius: 10px;
+  border: none;
+  border: 0.5px solid rgba(0, 0, 0, 0.548);
+  font-size: 30px;
+  max-width: 100%;
+
+
+
+}
+
 
 /* First Currency Drop-Down */
 
 .button-first-currency {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .button-first-currency:hover, .button-first-currency:focus {
-    background-color: #2980B9;
-  }
-  
-  .dropdow-first-currency {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .list-currencies {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .list-currencies button {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdow-first-currency p:hover {background-color: #ddd;}
-  
-  .show {display: block;}
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  border: 0.5px solid rgba(0, 0, 0, 0.548);
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-first-currency p {
+  margin: 0;
+  font-size: 30px;
+  text-align: left;
+  grid-column: span 3;
+}
+
+.button-first-currency i {
+  grid-column: 4; 
+  height: max-content;
+  text-align: center;
+}
+
+.button-first-currency:hover, .button-first-currency:focus {
+  background-color: #e6e6e6;
+  outline: 2px solid #1455d6;
+}
+
+.dropdown-first-currency {
+  position: relative;
+  display: inline-block;
+
+}
+
+.list-currencies {
+  display: none;
+  position: absolute;
+  float: right;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.list-currencies button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-first-currency:hover .list-currencies {
+  display: block;
+}
+
+.dropdown-first-currency p:hover {background-color: #ddd;}
+
+
+/* Result */
+
+#result {
+  font-size: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+
+
+}
+
+
+/* Second Currency Drop-Down */
+
+.button-second-currency {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  border: 0.5px solid rgba(0, 0, 0, 0.548);
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-second-currency p {
+  margin: 0;
+  max-height: 30px ;
+  font-size: 30px;
+  text-align: left;
+  grid-column: span 3;
+}
+
+.button-second-currency i {
+  grid-column: 4; 
+  height: max-content;
+  text-align: center;
+}
+
+.button-second-currency:hover, .button-second-currency:focus {
+  background-color: #e6e6e6;
+  outline: 2px solid #1455d6;
+}
+
+.dropdown-second-currency {
+  position: relative;
+  display: inline-block;
+
+}
+
+.list-currencies {
+  display: none;
+  position: absolute;
+  float: right;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.list-currencies button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-second-currency:hover .list-currencies {
+  display: block;
+}
+
+.dropdown-second-currency p:hover {background-color: #ddd;}
+
+
+
+/* Conver Button*/
+.convert-button {
+  max-width: 150px;
+  max-height: 150px;
+  font-size: 30px;
+  cursor: pointer;
+  border: 0.5px solid rgba(0, 0, 0, 0.548);
+  border-radius: 10px;
+  grid-row: span 2;
+
+}
+
+.convert-button:hover {
+  background-color: #51ab59;
+  border-radius: 150px;
+}

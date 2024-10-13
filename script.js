@@ -1,6 +1,5 @@
 //Const
 
-const testText = document.getElementById('test-text');
 
 //First Input
 const inputFirstCurrency = document.getElementById('input-first-currency');
@@ -27,16 +26,6 @@ const BASE_URL = "https://openexchangerates.org/api/latest.json";
 
 //functions
 
-//Show drop down list
-function dropDownShow(id) {
-    if(id == 1) {
-        document.getElementById('list-first-currency').classList.toggle('show');
-    } else if (id == 2) {
-        document.getElementById('list-second-currency').classList.toggle('show');
-    }
-    
-};
-
 //First Drop-Down update textContent
 firstCurrency.forEach(button => {
     button.addEventListener('click', function(){
@@ -53,7 +42,6 @@ secondCurrency.forEach(button => {
 
 //Result Button 
 convertButton.addEventListener('click', function() {
-    testText.textContent = "Convert button gecklickt";
     calcResult(
         inputFirstCurrency.value,
         buttonFirstCurrency.textContent,
@@ -67,18 +55,15 @@ convertButton.addEventListener('click', function() {
 
 //Calc Result
 async function calcResult(firstInput, firstCurrency, secondCurrency) {
-    testText.textContent = "in calc funtion";
     return firstInput * await getExchangeRate(firstCurrency, secondCurrency)
 }
 
 //Get Exchange Rate
-
 async function getExchangeRate (firstCurrency, secondCurrency) {
     const urlString = `${BASE_URL}?app_id=${API_KEY}&symbols=${firstCurrency},${secondCurrency}`
     try {
         const response = await fetch(urlString);
         if (!response.ok) {
-            testText.textContent = " Error früh";
             throw new Error(`HTTP-Fehler! Status: ${response.status}`);
         }
         
@@ -94,12 +79,9 @@ async function getExchangeRate (firstCurrency, secondCurrency) {
         
         console.log("To Rate:", toRate);
         console.log("From Rate:", fromRate);
-
-        testText.textContent = "Berechnung erfolgreich";
         
         return toRate / fromRate;
     } catch (error) {
-        testText.textContent = " Error spät";
         console.error('Fehler beim Abrufen des Wechselkurses:', error);
         throw error;
     }
