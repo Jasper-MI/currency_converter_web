@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Currency converter</h1>
+    </header>
+
+    <main>
+        <p>Type in the amount you want to convert</p>
+        <input type="number" id="input-first-currency" >
+        <div id="dropdow-first-currency">
+            <button onclick="dropDownShow(1)" class="button-first-currency">First Currency</button>
+            <div id="list-first-currency" class="list-currencies">
+                <button class="first-currency">USD</button>
+                <button class="first-currency">EUR</button>
+                <button class="first-currency">GBP</button>
+            </div>
+        </div>
+
+        <p>to</p>
+        <div id="dropdow-second-currency">
+            <button onclick="dropDownShow(2)" class="button-second-currency">Second Currency</button>
+            <div id="list-second-currency" class="list-currencies">
+                <button class="second-currency">USD</button>
+                <button class="second-currency">EUR</button>
+                <button class="second-currency">GBP</button>
+            </div>
+        </div>
+        <button class="convert-button">convert</button>
+        <p id="result">Result</p>
+        <p id="test-text">Test Text</p>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Deine Webseite</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
