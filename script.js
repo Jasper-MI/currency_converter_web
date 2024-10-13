@@ -26,6 +26,24 @@ const BASE_URL = "https://openexchangerates.org/api/latest.json";
 
 //functions
 
+/*
+function showMenu(id) {
+    if(id == 1) {
+        document.getElementById('list-first-currency').classList.toggle('show');
+    } else if (id == 2) {
+        document.getElementById('list-second-currency').classList.toggle('show');
+    }
+}
+
+*/
+
+/*
+function closeMenu() {
+    document.getElementById('list-first-currency').classList.toggle('close');
+}
+*/
+
+
 //First Drop-Down update textContent
 firstCurrency.forEach(button => {
     button.addEventListener('click', function(){
@@ -44,8 +62,8 @@ secondCurrency.forEach(button => {
 convertButton.addEventListener('click', function() {
     calcResult(
         inputFirstCurrency.value,
-        buttonFirstCurrency.textContent,
-        buttonSecondCurrency.textContent
+        buttonFirstCurrency.textContent.substring(0,3),
+        buttonSecondCurrency.textContent.substring(0,3)
     ).then(result => {
         resultParagraph.textContent = "Result: " + result;
     }).catch(error => {
