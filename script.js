@@ -19,7 +19,7 @@ const resultParagraph = document.getElementById('result');
 const convertButton = document.querySelector('.convert-button');
 
 //API
-const API_KEY = "f7b054e08f9045c68e3766fd2c461692";
+const API_KEY = "****************************";
 
 const BASE_URL = "https://openexchangerates.org/api/latest.json";
 
